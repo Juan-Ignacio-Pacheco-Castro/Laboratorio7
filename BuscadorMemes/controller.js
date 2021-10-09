@@ -5,7 +5,6 @@ class Controller {
 
     async loadAll(){
         let data = await this.downloadMemes();
-        console.log(data);
         this.run(data);
     }
 
@@ -30,7 +29,6 @@ class Controller {
         })
         document.getElementById('search').addEventListener('input', (keyText) => {
             let memesToBeDisplayedArray = [];
-            let namesToBeDisplayed = [];
             let stringToBeDisplayed = '';
 
             if(keyText.target.value){
